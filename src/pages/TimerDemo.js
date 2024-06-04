@@ -3,28 +3,37 @@ import { useState, useEffect } from 'react';
 import './TimerDemo.css';
 
 const TimerDemo = () => {
-
   const [seconds, setSeconds] = useState(60);
+  const [running, setRunning] = useState(false)
 
   useEffect(() => {
-    if (seconds > 0) {
+    if (seconds > 0 && running) {
       const intervalId = setInterval(() => {
         setSeconds(prevSeconds => prevSeconds - 1);
       }, 1000);
 
       // Vyčištění intervalu při odmountování komponenty nebo když seconds dosáhne 0
       return () => clearInterval(intervalId);
-    } else {
-      setSeconds(60);
+    } else if (seconds <= 0 && running) {
+      setSeconds(60)
     }
-  }, [seconds]);
+  }, [seconds, running]);
+
+  const startStop = () => { 
+    setRunning(!running)
+   }
+
+   const reset = () => { 
+    setSeconds(60);
+    setRunning(false)
+    }
 
   return (
     <div className="demo">
       <div className='timer'>{seconds}</div>
       <div className="controls">
-        <button className="controls--button" id='start'>start</button>
-        <button className="controls--button" id='reset'>reset</button>
+        <button onClick={startStop} className="controls--button" id={running ? 'stop' : 'start'}>{running ? 'stop' : 'start'}</button>
+        <button onClick={reset} className="controls--button" id='reset'>reset</button>
       </div>
     </div>
   )

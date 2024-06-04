@@ -3,8 +3,12 @@
     flex-direction: column;
     height: 100vh;
     background-image: url("/src/img/demo/boxer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 25%;
     justify-content: center;
     align-items: center;
+    container-type: inline-size;
 }
 
 .timer {
@@ -13,6 +17,7 @@
     color: var(--accent);
     height: 90vh;
     align-items: center;
+    font-size: 100px;
 }
 
 .controls {
@@ -28,12 +33,52 @@
     justify-content: center;
     border: none;
     font-family: "Martian Mono", monospace;
+    font-weight: 200;
+    font-size: 15px;
+    text-transform: uppercase;
 }
 
 #start {
+    background-color: var(--accent);
+    color: var(--reset);
+}
+
+#stop {
     background-color: var(--stop);
+    color: var(--accent);
 }
 
 #reset {
     background-color: var(--reset);
+    color: var(--accent);
+}
+
+@container (width > 260px) {
+    .timer {
+        font-size: 150px;
+    }
+}
+
+@container (width > 360px) {
+    .timer {
+        font-size: 220px;
+    }
+}
+
+@container (width > 560px) {
+    .timer {
+        font-size: 350px;
+    }
+    .controls--button {
+        font-size: 18px;
+    }
+}
+
+@container (width > 900px) {
+    .timer {
+        font-size: 550px;
+    }
+    .controls--button {
+        font-size: 18px;
+    }
 }
