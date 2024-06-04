@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
-
+:root {
+  --accent: #CBFF73;
+  --reset: #616E79;
+  --stop: #FF5A95
+}
 body {
   margin: 0;
   font-family: "Martian Mono", monospace;

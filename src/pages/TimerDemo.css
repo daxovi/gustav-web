@@ -1,4 +1,39 @@
+.demo {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("/src/img/demo/boxer.jpg");
+    justify-content: center;
+    align-items: center;
+}
+
 .timer {
+    display: flex;
     font-weight: 900;
-    
+    color: var(--accent);
+    height: 90vh;
+    align-items: center;
+}
+
+.controls {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+}
+
+.controls--button {
+    display: flex;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-family: "Martian Mono", monospace;
+}
+
+#start {
+    background-color: var(--stop);
+}
+
+#reset {
+    background-color: var(--reset);
 }
