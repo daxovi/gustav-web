@@ -5,12 +5,18 @@
 .web {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr minmax(300px, 400px) 1fr;
+  grid-template-columns: 1fr 400px 1fr;
   grid-template-rows: 3em auto 3em;
   background-color: var(--reset);
   background-image: url("/src/img/bg.jpg");
   background-repeat: repeat-y;
   background-position: 50%;
+  transition: grid-template-columns 0.5s;
+}
+
+.web--animate-timer {
+  grid-template-columns: 3fr 400px 1fr;
+  transition: grid-template-columns 1s;
 }
 
 .web--content {
