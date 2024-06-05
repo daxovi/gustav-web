@@ -29,8 +29,12 @@ const TimerDemo = () => {
     }
 
   return (
-    <div className="demo">
-      <div className='timer'>{seconds}</div>
+    <div className="timer--demo">
+      <div className='timer'>
+        <div id={seconds < 10 ? 'timer--onedigit' : ''}>
+        {seconds}
+        </div>
+        </div>
       <div className="controls">
         <button onClick={startStop} className="controls--button" id={running ? 'stop' : 'start'}>{running ? 'stop' : 'start'}</button>
         <button onClick={reset} className="controls--button" id='reset'>reset</button>

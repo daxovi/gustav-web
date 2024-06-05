@@ -1,0 +1,19 @@
+.phonedemo--timer {
+    background-image: url("/src/img/demo/display.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.phonedemo--display {
+    height: 91%;
+    max-width: 80%;
+    border-radius: 15% / 7%;
+    overflow: hidden;
+    aspect-ratio: 0.477;
+}

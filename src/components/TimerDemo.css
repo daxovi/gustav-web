@@ -1,7 +1,7 @@
-.demo {
+.timer--demo {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     background-image: url("/src/img/demo/boxer.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,26 +15,31 @@
     display: flex;
     font-weight: 900;
     color: var(--accent);
-    height: 90vh;
+    height: 90%;
     align-items: center;
     font-size: 100px;
 }
 
+#timer--onedigit {
+font-size: 1.8em;
+}
+
 .controls {
     display: flex;
-    width: 100vw;
-    height: 10vh;
+    width: 100%;
+    height: 10%;
+    min-height: 30px;
 }
 
 .controls--button {
     display: flex;
-    width: 50vw;
+    width: 50%;
     align-items: center;
     justify-content: center;
     border: none;
     font-family: "Martian Mono", monospace;
     font-weight: 200;
-    font-size: 15px;
+    font-size: 7px;
     text-transform: uppercase;
 }
 
@@ -57,11 +62,17 @@
     .timer {
         font-size: 150px;
     }
+    .controls--button {
+        font-size: 13px;
+    }
 }
 
 @container (width > 360px) {
     .timer {
         font-size: 220px;
+    }
+    .controls--button {
+        font-size: 15px;
     }
 }
 
@@ -81,4 +92,7 @@
     .controls--button {
         font-size: 18px;
     }
+    #timer--onedigit {
+        font-size: 1em;
+        }
 }
