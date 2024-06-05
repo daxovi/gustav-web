@@ -26,6 +26,10 @@ function App() {
   return (
     <div>
       <div className={xPosition < -2 ? "web web--animate-timer" : "web"}>
+        <div className="web--header">
+          Header
+        </div>
+        <div></div>
         <div className="web--menu">
           Menu
         </div>
@@ -44,6 +48,8 @@ function App() {
         <div className="web--footer">
           Footer
         </div>
+        <div></div>
+        <div className="web--end">End</div>
       </div>
       <div className="app">
         <TimerDemo />

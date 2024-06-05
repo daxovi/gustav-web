@@ -15,24 +15,47 @@
 }
 
 .web--animate-timer {
-  grid-template-columns: 3fr 400px 1fr;
+  grid-template-columns: 2fr 400px 0.5fr;
   transition: grid-template-columns 1s;
+}
+
+.web--timer {
+  background-color: var(--stop);
+  margin-right: -200px;
 }
 
 .web--content {
   padding: 1em;
 }
 
+/* MARK: TOP 
+*/
+.web--header {
+  padding: 1em;
+  margin-right: -200px;
+  background-color: var(--stop);
+}
+
 .web--menu {
-  grid-column: span 3;
   padding: 1em;
+  margin-left: -200px;
 }
 
+/* MARK: BOTTOM
+*/
 .web--footer {
-  grid-column: span 3;
+  margin-right: -200px;
+  background-color: var(--stop);
   padding: 1em;
 }
 
+.web--end {
+  padding: 1em;
+  margin-left: -200px;
+}
+
+/* MARK: DEMO
+*/
 .web--demo {
   display: flex;
   flex-direction: column;
