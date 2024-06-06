@@ -8,9 +8,6 @@
   grid-template-columns: 1fr 400px 1fr;
   grid-template-rows: 3em auto 3em;
   background-color: var(--reset);
-  background-image: url("/src/img/bg.jpg");
-  background-repeat: repeat-y;
-  background-position: 50%;
   transition: grid-template-columns 0.5s;
 }
 
@@ -19,13 +16,24 @@
   transition: grid-template-columns 1s;
 }
 
-.web--timer {
-  background-color: var(--stop);
-  margin-right: -200px;
+.web--animate-weights {
+  grid-template-columns: 0.5fr 400px 2fr;
+  transition: grid-template-columns 1s;
 }
 
 .web--content {
   padding: 1em;
+}
+.web--timer {
+  background-color: var(--stop);
+  margin-right: -200px;
+  padding-right: 200px;
+}
+
+.web--weights {
+  background-color: var(--reset);
+  margin-left: -200px;
+  padding-left: 200px;
 }
 
 /* MARK: TOP 
@@ -52,6 +60,7 @@
 .web--end {
   padding: 1em;
   margin-left: -200px;
+  background-color: var(--reset);
 }
 
 /* MARK: DEMO
@@ -59,13 +68,23 @@
 .web--demo {
   display: flex;
   flex-direction: column;
+  z-index: 2;
 }
 
 .web--download {
-  padding: 10%;
+  padding: 8%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1em;
 }
 
-@media only screen and (max-width: 600px) {
+.web--download-qr {
+  background: white;
+  padding: 0.5em;
+  border-radius: 5%;
+}
+
+@media only screen and (max-width: 800px) {
   .web {
     display: none;
   }
