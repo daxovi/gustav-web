@@ -14,12 +14,9 @@ function App() {
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
     const { innerWidth, innerHeight } = window;
-
     const offsetX = (clientX / innerWidth - 0.5) * 20; // Adjust the 20 to control sensitivity
     const offsetY = (clientY / innerHeight - 0.5) * 20;
-
     setXPosition(offsetX);
-    console.log(offsetX);
   };
 
   const animateClassName = () => {
