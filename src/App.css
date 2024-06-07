@@ -2,6 +2,11 @@
   display: none;
 }
 
+h2 {
+  padding: 0px;
+  margin: 0px;
+}
+
 .web {
   height: 100vh;
   display: grid;
@@ -13,16 +18,25 @@
 
 .web--animate-timer {
   grid-template-columns: 2fr 400px 0.5fr;
-  transition: grid-template-columns 1s;
+  transition: grid-template-columns 0.5s;
 }
 
 .web--animate-weights {
   grid-template-columns: 0.5fr 400px 2fr;
-  transition: grid-template-columns 1s;
+  transition: grid-template-columns 0.5s;
 }
 
 .web--content {
-  padding: 1em;
+  display: flex;
+  padding: 1.5em;
+  color: rgba(0, 0, 0, 1);
+  transition: color 0.5s 0.5s;
+}
+
+.web--content#bold {
+  display: flex;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0);
 }
 .web--timer {
   background-color: var(--stop);
@@ -38,11 +52,6 @@
 
 /* MARK: TOP 
 */
-.web--header {
-  padding: 1em;
-  margin-right: -200px;
-  background-color: var(--stop);
-}
 
 .web--menu {
   padding: 1em;

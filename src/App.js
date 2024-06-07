@@ -2,8 +2,9 @@ import './App.css';
 import PhoneDemo from './components/PhoneDemo';
 import TimerDemo from './components/TimerDemo';
 import { useEffect, useState } from 'react';
-import appstore from "./img/appstore.svg";
-import QRCode from "react-qr-code";
+import Header from './components/Header';
+import BoldAppName from './components/BoldAppName';
+import AppDetail from './components/AppDetail';
 
 function App() {
 
@@ -57,30 +58,36 @@ function App() {
   return (
     <div>
       <div className={animateClassName()}>
-        <div className="web--header">
-          Header
-        </div>
+        <Header/>
         <div></div>
         <div className="web--menu">
           Menu
         </div>
-        <div className="web--content web--timer">
-          timer
+        <div className="web--content web--timer" id={selectedSection == -1 ? "" : "bold"}>
+          {
+            selectedSection == -1 ?
+              <AppDetail>
+                <h2>gustav timer</h2>
+                <p>The Gustav Workout Timer app is offering the flexibility to set various intervals with audible alerts. It features a sports-themed interface, making it an ideal companion for athletes and fitness enthusiasts looking to customize their training sessions. With its user-friendly design, users can easily adjust their workout durations and rest periods, ensuring a personalized exercise routine. Whether you're into high-intensity interval training, yoga, or any other form of workout, this app provides the necessary tools to keep you motivated and on track with your fitness goals.</p>
+              </AppDetail>
+              :
+              <BoldAppName appName="timer" />
+          }
         </div>
         <div className="web--demo">
           <PhoneDemo selectedSection={selectedSection} />
-          <div className="web--download">
-            <a href="http://"><img src={appstore} alt="" srcset="" /></a>
-            <div className="web--download-qr">
-              <QRCode size={256}
-    style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-    value="seznam.cz"
-    viewBox={`0 0 256 256`} />
-            </div>
-          </div>
+
         </div>
-        <div className="web--content web--weights">
-          weights
+        <div className="web--content web--weights" id={selectedSection == 1 ? "" : "bold"}>
+          {
+            selectedSection == 1 ?
+              <AppDetail>
+                <h2>gustav weights</h2>
+                <p>Gustav Weights is your ultimate workout companion! Track your exercises, record weights lifted, and monitor your progress seamlessly. Achieve your fitness goals by setting personal records and witnessing your improvement journey. Whether you're a novice or a fitness enthusiast, Gustav Weights is tailored to help you reach your peak performance.</p>
+              </AppDetail>
+              :
+              <BoldAppName appName="weights" />
+          }
         </div>
         <div className="web--footer">
           Footer
