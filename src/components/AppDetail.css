@@ -1,0 +1,50 @@
+p, ul {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5em;
+}
+
+h2 {
+    font-family: "Martian Mono", monospace;
+    padding: 0px;
+    margin: 0px;
+}
+
+.app-detail {
+    width: 100%;
+    max-width: 800px;
+    container: content / inline-size;
+}
+
+.web--timer .app-detail--download {
+    text-align: right;
+}
+
+
+.app-detail--download img {
+    height: 70px;
+}
+
+ul {
+    padding-left: 1em;
+    margin: 0;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2em;
+}
+
+@container content (width < 600px) {
+    .columns {
+        grid-template-columns: auto;
+    }
+}
+
+@container content (width < 450px) {
+    .secondCol {
+        display: none;
+    }
+    
+}
+

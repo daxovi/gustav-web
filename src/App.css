@@ -2,10 +2,11 @@
   display: none;
 }
 
-h2 {
-  padding: 0px;
-  margin: 0px;
+body {
+  font-family: "Martian Mono", monospace;
 }
+
+
 
 .web {
   height: 100vh;
@@ -38,7 +39,9 @@ h2 {
   justify-content: center;
   color: rgba(0, 0, 0, 0);
 }
+
 .web--timer {
+  justify-content: flex-end;
   background-color: var(--stop);
   margin-right: -200px;
   padding-right: 200px;
@@ -64,12 +67,16 @@ h2 {
   margin-right: -200px;
   background-color: var(--stop);
   padding: 1em;
+  display: flex;
+  align-items: flex-end;
 }
 
 .web--end {
   padding: 1em;
   margin-left: -200px;
   background-color: var(--reset);
+  display: flex;
+  align-items: flex-end;
 }
 
 /* MARK: DEMO
