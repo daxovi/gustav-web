@@ -3,10 +3,21 @@ import PhoneDemo from './components/PhoneDemo';
 import TimerDemo from './components/TimerDemo';
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
+import Menu from './components/Menu';
+import Footer from './components/Footer';
+import End from './components/End';
 import BoldAppName from './components/BoldAppName';
 import AppDetail from './components/AppDetail';
+
+/* MARK: CONTENT
+*/
 import * as timerContent from "./content/timer";
 import * as weightsContent from "./content/weights";
+
+/* MARK: CONFIG
+*/
+import animationConfig from './config/animationConfig';
+import behaviorConfig from './config/behaviorConfig';
 
 function App() {
 
@@ -23,24 +34,24 @@ function App() {
 
   const animateClassName = () => {
     if (selectedSection == 0) {
-      if (xPosition < -3) {
+      if (xPosition < -behaviorConfig.distanceToStart) {
         setSelectedSection(-1)
         return "web web--animate-timer";
-      } else if (xPosition > 3) {
+      } else if (xPosition > behaviorConfig.distanceToStart) {
         setSelectedSection(1)
         return "web web--animate-weights";
       } else {
         return "web";
       }
     } else if (selectedSection == -1) {
-      if (xPosition > 8) {
+      if (xPosition > behaviorConfig.distanceToSwitch) {
         setSelectedSection(1)
         return "web web--animate-weights";
       } else {
         return "web web--animate-timer";
       }
     } else if (selectedSection == 1) {
-      if (xPosition < -8) {
+      if (xPosition < -behaviorConfig.distanceToSwitch) {
         setSelectedSection(-1)
         return "web web--animate-timer";
       } else {
@@ -55,13 +66,16 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div 
+    style={{
+      '--transition-duration': animationConfig.transitionDuration,
+      '--fade-duration': animationConfig.fadeDuration,
+      '--transition-easing': animationConfig.easing
+    }}>
       <div className={animateClassName()}>
         <Header />
         <div></div>
-        <div className="web--menu">
-          Menu
-        </div>
+        <Menu/>
         <div className="web--content web--timer" id={selectedSection == -1 ? "" : "bold"}>
           { selectedSection == -1 ? <AppDetail content={timerContent} /> : <BoldAppName appName="timer" /> }
         </div>
@@ -71,11 +85,9 @@ function App() {
         <div className="web--content web--weights" id={selectedSection == 1 ? "" : "bold"}>
         { selectedSection == 1 ? <AppDetail content={weightsContent} /> : <BoldAppName appName="weights" /> }
         </div>
-        <div className="web--footer">
-          Footer
-        </div>
+        <Footer />
         <div></div>
-        <div className="web--end">End</div>
+        <End />
       </div>
       <div className="app">
         <TimerDemo />

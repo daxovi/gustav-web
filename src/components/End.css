@@ -1,0 +1,8 @@
+.end {
+    padding: 1.5em;
+    margin-left: -200px;
+    background-color: var(--reset);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }

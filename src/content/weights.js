@@ -9,10 +9,13 @@ export const firstCol = (
 )
 
 export const secondCol = (
+    <p>
+        <strong>FEATURE LIST</strong>
     <ul>
         <li>Adding your own exercises</li>
         <li>Simple entry of the weight lifted</li>
         <li>Modern user interface</li>
         <li>Detailed logbook</li>
     </ul>
+    </p>
 )
