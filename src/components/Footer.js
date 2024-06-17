@@ -1,10 +1,13 @@
 import React from 'react';
 import "./Footer.css";
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <div className="footer">
-          Footer
+      <NavLink to="/demo" activeClassName="active">
+        demo
+      </NavLink>
         </div>
   )
 }

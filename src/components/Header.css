@@ -1,11 +1,17 @@
 .header {
     padding: 1.5em;
     margin-right: -200px;
-    background-color: var(--stop);
+    background-color: var(--timer-bg);
   }
 
   .header #training {
     display: none;
+  }
+
+  .header h1 {
+    font-size: 1em;
+    margin: 0;
+    text-transform: uppercase;
   }
   
 

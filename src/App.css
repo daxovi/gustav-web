@@ -11,7 +11,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 400px 1fr;
   grid-template-rows: 1fr 750px 1fr;
-  background-color: var(--reset);
+  background-color: var(--weights-bg);
   transition: grid-template-columns var(--transition-duration);
 }
 
@@ -37,13 +37,13 @@ body {
 
 .web--timer {
   justify-content: flex-end;
-  background-color: var(--stop);
+  background-color: var(--timer-bg);
   margin-right: -200px;
   padding-right: 200px;
 }
 
 .web--weights {
-  background-color: var(--reset);
+  background-color: var(--weights-bg);
   margin-left: -200px;
   padding-left: 200px;
 }

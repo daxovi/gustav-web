@@ -2,14 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --accent: #CBFF73;
+  --accent: #cbff58;
   --reset: #616E79;
-  --stop: #FF5A95
+  --stop: #FF5A95;
+  --timer-bg: #FF6BA0;
+  --weights-bg: #808a92;
 }
 body {
   background-color: var(--reset);
   margin: 0;
-  color: #2a2729;
+  color: #232122;
 }
 
 .demo--app {
