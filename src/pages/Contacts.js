@@ -1,5 +1,4 @@
 import React from 'react'
-import "./Contacts.css";
 
 import TextPage from '../components/TextPage';
 
