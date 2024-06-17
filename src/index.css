@@ -7,6 +7,12 @@
   --stop: #FF5A95
 }
 body {
+  background-color: var(--reset);
   margin: 0;
   color: #2a2729;
+}
+
+.demo--app {
+  display: block;
+  height: 100vh;
 }

@@ -1,13 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+
 import App from './App';
+import Contacts from './pages/Contacts';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TimerDemo from './components/TimerDemo';
+
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "contacts/",
+    element: <Contacts />,
+  },
+  {
+    path: "privacypolicy/",
+    element: <PrivacyPolicy />,
+  },
+  {
+    path: "demo/",
+    element: <div className="demo--app"><TimerDemo /></div>,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
+    
   </React.StrictMode>
 );
 

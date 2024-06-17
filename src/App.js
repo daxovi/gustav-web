@@ -93,7 +93,6 @@ function App() {
         <TimerDemo />
       </div>
     </div>
-
   );
 }
 

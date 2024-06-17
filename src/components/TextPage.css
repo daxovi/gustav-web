@@ -1,0 +1,29 @@
+.web-single {
+    min-height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 4em 1fr;
+    background-color: var(--reset);
+    transition: grid-template-columns var(--transition-duration);
+  }
+
+  .web-single .menu,
+  .web-single .header,
+  .web-single .footer,
+  .web-single .end {
+    padding: 1.5em;
+    margin: 0;
+    background-color: var(--stop);
+  }
+
+  .web-single .content {
+    justify-self: center;
+    padding: 1.5em;
+    max-width: 800px;
+    grid-column: 1 / span 2;
+  }
+
+  .web-single .content a {
+    color: #b7b7b7;
+  }

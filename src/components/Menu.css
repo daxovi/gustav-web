@@ -3,3 +3,9 @@
     margin-left: -200px;
     text-align: right;
   }
+
+  .menu a {
+    padding-left: 2em;
+    color: #2a2729;
+  }
+
