@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/gustav-web/static/css/main.45a96bbf.css",
+    "main.js": "/gustav-web/static/js/main.41620a2f.js",
+    "static/js/453.d4e0ce79.chunk.js": "/gustav-web/static/js/453.d4e0ce79.chunk.js",
+    "static/media/display.png": "/gustav-web/static/media/display.23445364954711a7fbb1.png",
+    "static/media/boxer.jpg": "/gustav-web/static/media/boxer.6724f4b0ac9f40310fc5.jpg",
+    "static/media/appstore.svg": "/gustav-web/static/media/appstore.33bc24148116ffa6cc5994c4f19988bc.svg",
+    "index.html": "/gustav-web/index.html",
+    "main.45a96bbf.css.map": "/gustav-web/static/css/main.45a96bbf.css.map",
+    "main.41620a2f.js.map": "/gustav-web/static/js/main.41620a2f.js.map",
+    "453.d4e0ce79.chunk.js.map": "/gustav-web/static/js/453.d4e0ce79.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45a96bbf.css",
+    "static/js/main.41620a2f.js"
+  ]
+}
