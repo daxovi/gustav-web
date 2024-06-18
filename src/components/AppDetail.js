@@ -1,6 +1,5 @@
 import React from 'react'
 import "./AppDetail.css";
-import appStore from "../img/appstore.svg";
 import { useEffect, useState } from 'react';
 import animationConfig from '../config/animationConfig';
 
@@ -29,8 +28,8 @@ const AppDetail = ({ content }) => {
           {content.secondCol}
         </div>
       </div>
-      <div className="app-detail--download">
-      <a href="http://"><img src={appStore} alt="" srcset="" /></a>
+      <div className="app-detail--features">
+      {content.features}
       </div>
     </div>
   )

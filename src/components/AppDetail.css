@@ -21,14 +21,16 @@ h2 {
     transition: opacity var(--fade-duration);
   }
 
-.web--timer .app-detail--download {
-    text-align: right;
+  .app-detail--features {
+    padding-top: 1em;
+
+  }
+
+.app-detail--features img {
+    height: 60px;
+    padding-right: 2em;
 }
 
-
-.app-detail--download img {
-    height: 70px;
-}
 
 ul {
     padding-left: 1em;
@@ -45,6 +47,10 @@ ul {
     .columns {
         grid-template-columns: auto;
     }
+    
+.app-detail--features-hidden {
+    display: none;
+}
 }
 
 @container content (width < 450px) {

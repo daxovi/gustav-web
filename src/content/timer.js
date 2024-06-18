@@ -1,5 +1,12 @@
 import React from 'react';
 
+import addbtn from "../img/features/addbtn.svg";
+import appstore from "../img/features/appstore.svg";
+import custombg from "../img/features/custombg.svg";
+import noadnocash from "../img/features/noadsnocash.svg";
+import skipbtn from "../img/features/skipbtn.svg";
+import trybeforeyoubuy from "../img/features/trybeforeyoubuy.svg";
+
 export const header = "gustav timer";
 
 export const firstCol = (
@@ -20,4 +27,14 @@ export const secondCol = (
         <li>Quick skip to the next interval option</li>
     </ul>
     </p>
+)
+
+export const features = (
+    <div>
+        <a href="https://apps.apple.com/us/app/gustav-workout-timer/id6478176431" target="_blank"><img src={appstore} alt="" srcset="" /></a>
+        <img className="app-detail--features-hidden" src={noadnocash} alt="" srcset="" />
+        <img className="app-detail--features-hidden" src={skipbtn} alt="" srcset="" />
+        <img className="app-detail--features-hidden" src={trybeforeyoubuy} alt="" srcset="" />
+        <img className="app-detail--features-hidden" src={custombg} alt="" srcset="" />
+    </div>
 )
