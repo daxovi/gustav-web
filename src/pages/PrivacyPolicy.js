@@ -5,7 +5,7 @@ const PrivacyPolicy = () => {
     return (
         <TextPage>
             <div>
-                <h2>privacy policy for Apps</h2>
+                <h2>privacy policy for Gustav apps</h2>
                 <p>Effective Date: 19. 2. 2024</p>
                 <p>Developer: Dalibor Janeček</p>
                 <h3>Introduction</h3>

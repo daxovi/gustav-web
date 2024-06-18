@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: 4em 1fr;
-    background-color: var(--reset);
+    background-color: var(--weights-bg);
     transition: grid-template-columns var(--transition-duration);
   }
 
@@ -14,7 +14,7 @@
   .web-single .end {
     padding: 1.5em;
     margin: 0;
-    background-color: var(--stop);
+    background-color: var(--timer-bg);
   }
 
   .web-single .content {
