@@ -1,7 +1,7 @@
 {
   "name": "gustav-web",
   "version": "0.1.0",
-  "homepage": "https://daxovi.github.io/gustav-web",
+  "homepage": "https://daxovi.github.io/gustav-web/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
