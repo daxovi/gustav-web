@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import addbtn from "../img/features/addbtn.svg";
 import appstore from "../img/features/appstore.svg";
@@ -34,7 +35,9 @@ export const features = (
         <a href="https://apps.apple.com/us/app/gustav-workout-timer/id6478176431" target="_blank"><img src={appstore} alt="" srcset="" /></a>
         <img className="app-detail--features-hidden" src={noadnocash} alt="" srcset="" />
         <img className="app-detail--features-hidden" src={skipbtn} alt="" srcset="" />
+        <NavLink to="/demo" activeClassName="active">
         <img className="app-detail--features-hidden" src={trybeforeyoubuy} alt="" srcset="" />
+      </NavLink>
         <img className="app-detail--features-hidden" src={custombg} alt="" srcset="" />
     </div>
 )

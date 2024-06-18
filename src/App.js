@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import End from './components/End';
 import BoldAppName from './components/BoldAppName';
 import AppDetail from './components/AppDetail';
+import AppMobile from './pages/AppMobile';
 
 /* MARK: CONTENT
 */
@@ -90,7 +91,7 @@ function App() {
         <End />
       </div>
       <div className="app">
-        <TimerDemo />
+        <AppMobile />
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 400px 1fr;
-  grid-template-rows: 1fr 750px 1fr;
+  grid-template-rows: 1fr 700px 1fr;
   background-color: var(--weights-bg);
   transition: grid-template-columns var(--transition-duration);
 }

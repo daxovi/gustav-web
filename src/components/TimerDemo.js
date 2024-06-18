@@ -30,6 +30,9 @@ const TimerDemo = () => {
 
   return (
     <div className="timer--demo">
+      <div className="timer--demo-fullexperience">
+        <a href="https://apps.apple.com/us/app/gustav-workout-timer/id6478176431">get full experience</a>
+      </div>
       <div className='timer'>
         <div id={seconds < 10 ? 'timer--onedigit' : ''}>
         {seconds}

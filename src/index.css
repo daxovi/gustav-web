@@ -9,7 +9,7 @@
   --weights-bg: #808a92;
 }
 body {
-  background-color: var(--reset);
+  background-color: var(--weights-bg);
   margin: 0;
   color: #232122;
 }

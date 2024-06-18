@@ -11,6 +11,18 @@
     container-type: inline-size;
 }
 
+.timer--demo .timer--demo-fullexperience {
+    padding-top: 1em;
+}
+
+.phonedemo--display .timer--demo .timer--demo-fullexperience {
+    display: none;
+}
+
+.timer--demo .timer--demo-fullexperience a {
+    color: rgb(146, 146, 146);
+}
+
 .timer {
     display: flex;
     font-weight: 900;
@@ -61,6 +73,15 @@ font-size: 1.8em;
 @container (width > 260px) {
     .timer {
         font-size: 150px;
+    }
+    .controls--button {
+        font-size: 13px;
+    }
+}
+
+@container (width > 300px) {
+    .timer {
+        font-size: 200px;
     }
     .controls--button {
         font-size: 13px;
