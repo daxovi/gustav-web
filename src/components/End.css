@@ -1,8 +1,18 @@
 .end {
     padding: 1.5em;
     margin-left: -200px;
-    background-color: var(--reset);
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+  }
+
+  .end a {
+    padding-left: 2em;
+    color: #2a2729;
+    text-decoration: none;
+  }
+
+  .end a.active {
+    color: white;
+    opacity: 0.5;
   }

@@ -7,5 +7,10 @@
   .menu a {
     padding-left: 2em;
     color: #2a2729;
+    text-decoration: none;
   }
 
+  .menu a.active {
+    color: white;
+    opacity: 0.5;
+  }
