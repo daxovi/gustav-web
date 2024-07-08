@@ -17,6 +17,10 @@ h2 img {
     filter: drop-shadow(#0000006b 0.1rem 0.5rem 0.5rem);
 }
 
+h2 a {
+    
+}
+
 .app-detail {
     width: 100%;
     max-width: 800px;

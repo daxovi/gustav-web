@@ -33,9 +33,11 @@ export const secondCol = (
     </p>
 )
 
+export const appStoreLink = "https://apps.apple.com/us/app/gustav-weights/id6483001116";
+
 export const features = (
     <div>
-        <a href="https://apps.apple.com/us/app/gustav-weights/id6483001116" target="_blank"><img src={appstore} alt="" srcset="" /></a>
+        <a href={appStoreLink} target="_blank"><img src={appstore} alt="" srcset="" /></a>
         <img className="app-detail--features-hidden" src={noadnocash} alt="" srcset="" />
         <img className="app-detail--features-hidden" src={addbtn} alt="" srcset="" />
     </div>

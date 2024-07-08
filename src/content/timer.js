@@ -36,9 +36,11 @@ export const secondCol = (
     </p>
 )
 
+export const appStoreLink = "https://apps.apple.com/us/app/gustav-workout-timer/id6478176431"
+
 export const features = (
     <div>
-        <a href="https://apps.apple.com/us/app/gustav-workout-timer/id6478176431" target="_blank"><img src={appstore} alt="" srcset="" /></a>
+        <a href={appStoreLink} target="_blank"><img src={appstore} alt="" srcset="" /></a>
         <img className="app-detail--features-hidden" src={noadnocash} alt="" srcset="" />
         <img className="app-detail--features-hidden" src={skipbtn} alt="" srcset="" />
         <NavLink to="/demo" activeClassName="active">

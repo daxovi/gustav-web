@@ -17,6 +17,11 @@
     background-color: var(--timer-bg);
   }
 
+  .web-single .menu,
+  .web-single .end {
+    grid-column-start: 2;
+  }
+
   .web-single .content {
     justify-self: center;
     padding: 1.5em;
