@@ -77,12 +77,14 @@ function App() {
         <Header />
         <div></div>
         <Menu/>
+        <div className={ selectedSection == -1 ? "timerBG" : "timerBG invisibleBG" } ></div>
         <div className="web--content web--timer" id={selectedSection == -1 ? "" : "bold"}>
           { selectedSection == -1 ? <AppDetail content={timerContent} /> : <BoldAppName appName="timer" /> }
         </div>
         <div className="web--demo">
           <PhoneDemo selectedSection={selectedSection} />
         </div>
+        <div className={ selectedSection == 1 ? "weightsBG" : "weightsBG invisibleBG" }></div>
         <div className="web--content web--weights" id={selectedSection == 1 ? "" : "bold"}>
         { selectedSection == 1 ? <AppDetail content={weightsContent} /> : <BoldAppName appName="weights" /> }
         </div>

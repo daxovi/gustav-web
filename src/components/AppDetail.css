@@ -4,9 +4,17 @@ p, ul {
 }
 
 h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
     font-family: "Martian Mono", monospace;
     padding: 0px;
     margin: 0px;
+}
+
+h2 img {
+    height: 2em;
+    filter: drop-shadow(#0000006b 0.1rem 0.5rem 0.5rem);
 }
 
 .app-detail {

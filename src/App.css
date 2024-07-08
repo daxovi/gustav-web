@@ -15,6 +15,43 @@ body {
   transition: grid-template-columns var(--transition-duration);
 }
 
+.timerBG {
+  background-image: url("img/bg/timer.jpg");
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.3;
+  z-index: 0;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  margin-right: 200px;
+  transition: opacity 3s 0s ease-out;
+  mix-blend-mode: screen;
+}
+
+.weightsBG {
+  background-image: url("img/bg/weights.jpg");
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.3;
+  z-index: 0;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  margin-left: 200px;
+  transition: opacity 3s 0s ease-out;
+  mix-blend-mode: screen;
+
+}
+
+.invisibleBG {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+
+}
+
 .web--animate-timer {
   grid-template-columns: 2fr 400px 0.5fr;
   transition: grid-template-columns var(--transition-duration);
@@ -40,12 +77,16 @@ body {
   background-color: var(--timer-bg);
   margin-right: -200px;
   padding-right: 200px;
+  grid-column-start: 1;
+  grid-row-start: 2;
 }
 
 .web--weights {
   background-color: var(--weights-bg);
   margin-left: -200px;
   padding-left: 200px;
+  grid-column-start: 3;
+  grid-row-start: 2;
 }
 
 /* MARK: DEMO
@@ -54,6 +95,8 @@ body {
   display: flex;
   flex-direction: column;
   z-index: 2;
+  grid-row-start: 2;
+  grid-column-start: 2;
 }
 
 .web--download {

@@ -19,7 +19,7 @@ const AppDetail = ({ content }) => {
   
   return (
     <div className={`app-detail ${visible ? 'visible' : ''}`}>
-      <h2>{content.header}</h2>
+      <h2>{content.icon}{content.header}</h2>
       <div className="columns">
         <div className="firstCol">
           {content.firstCol}

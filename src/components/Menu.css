@@ -2,6 +2,8 @@
     padding: 1.5em;
     margin-left: -200px;
     text-align: right;
+    grid-column-start: 3;
+    grid-row-start: 1;
   }
 
   .menu a {
@@ -13,4 +15,10 @@
   .menu a.active {
     color: white;
     opacity: 0.5;
+  }
+
+  @media only screen and (max-width: 800px) {  
+    .menu {
+      grid-column-start: 2;
+    }
   }

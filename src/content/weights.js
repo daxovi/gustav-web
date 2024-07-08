@@ -7,6 +7,12 @@ import noadnocash from "../img/features/noadsnocash.svg";
 import skipbtn from "../img/features/skipbtn.svg";
 import trybeforeyoubuy from "../img/features/trybeforeyoubuy.svg";
 
+import iconImage from "../img/icons/weights.png";
+
+export const icon = (
+    <img src={iconImage} alt="Gustav Weights icon"/>
+)
+
 export const header = "gustav weights";
 
 export const firstCol = (

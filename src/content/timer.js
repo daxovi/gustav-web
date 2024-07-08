@@ -8,6 +8,12 @@ import noadnocash from "../img/features/noadsnocash.svg";
 import skipbtn from "../img/features/skipbtn.svg";
 import trybeforeyoubuy from "../img/features/trybeforeyoubuy.svg";
 
+import iconImage from "../img/icons/timer.png";
+
+export const icon = (
+    <img src={iconImage} alt="Gustav Timer icon"/>
+)
+
 export const header = "gustav timer";
 
 export const firstCol = (

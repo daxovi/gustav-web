@@ -1,22 +1,29 @@
 .header {
-    padding: 1.5em;
-    margin-right: -200px;
-    background-color: var(--timer-bg);
-  }
+  padding: 1.5em;
+  margin-right: -200px;
+  background-color: var(--timer-bg);
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
 
+.header #training {
+  display: none;
+}
+
+.header h1 {
+  font-size: 1em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.header h1 a {
+  color: #232122;
+  text-decoration: none;
+}
+
+
+@media screen and (min-width: 660px) {
   .header #training {
-    display: none;
+    display: inline;
   }
-
-  .header h1 {
-    font-size: 1em;
-    margin: 0;
-    text-transform: uppercase;
-  }
-  
-
-  @media screen and (min-width: 660px) {
-    .header #training {
-      display: inline;
-    }
-  }
+}

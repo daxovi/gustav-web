@@ -4,6 +4,8 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    grid-column-start: 3;
+    grid-row-start: 3;
   }
 
   .end img {
@@ -22,4 +24,10 @@
   .end a.active {
     color: white;
     opacity: 0.5;
+  }
+
+  @media only screen and (max-width: 800px) {  
+    .end {
+      grid-column-start: 2;
+    }
   }

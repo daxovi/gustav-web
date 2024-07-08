@@ -4,6 +4,8 @@
     padding: 1.5em;
     display: flex;
     align-items: flex-end;
+    grid-column-start: 1;
+    grid-row-start: 3;
   }
 
   .footer a {
