@@ -19,6 +19,14 @@
 .header h1 a {
   color: #232122;
   text-decoration: none;
+  transition: color 0.7s ease-in-out;
+
+}
+
+.header h1 a:hover {
+  color: white;
+  transition: color 0.2s ease-in-out;
+
 }
 
 

@@ -30,5 +30,11 @@
   }
 
   .web-single .content a {
-    color: #b7b7b7;
+    color: #232122;
+    transition: color 0.7s ease-in-out;
+  }
+
+  .web-single .content a:hover {
+    color: white;
+    transition: color 0.2s ease-in-out;
   }

@@ -21,8 +21,9 @@ const AppDetail = ({ content }) => {
     <div className={`app-detail ${visible ? 'visible' : ''}`}>
 
       <h2>
+        <a href={content.appStoreLink} target='_blank'>
         {content.icon}{content.header}
-
+        </a>
         </h2>
 
       <div className="columns">

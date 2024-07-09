@@ -10,11 +10,19 @@
     padding-left: 2em;
     color: #2a2729;
     text-decoration: none;
+    transition: color 0.7s ease-in-out;
+
   }
 
+
+
   .menu a.active {
+    color: var(--accent);
+  }
+
+  .menu a:hover {
     color: white;
-    opacity: 0.5;
+    transition: color 0.2s ease-in-out;
   }
 
   @media only screen and (max-width: 800px) {  

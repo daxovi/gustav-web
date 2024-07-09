@@ -8,8 +8,8 @@ const Menu = () => {
       <NavLink exact to="/" activeClassName="active">
         apps
       </NavLink>
-      <NavLink to="/contacts" activeClassName="active">
-        contacts
+      <NavLink to="/contact" activeClassName="active">
+        contact
       </NavLink>
       <NavLink to="/privacypolicy" activeClassName="active">
         privacy

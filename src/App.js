@@ -23,6 +23,7 @@ import behaviorConfig from './config/behaviorConfig';
 function App() {
 
   const [xPosition, setXPosition] = useState(0);
+  const [yPosition, setYPosition] = useState(0);
   const [selectedSection, setSelectedSection] = useState(0);
 
   const handleMouseMove = (e) => {
@@ -31,34 +32,35 @@ function App() {
     const offsetX = (clientX / innerWidth - 0.5) * 20; // Adjust the 20 to control sensitivity
     const offsetY = (clientY / innerHeight - 0.5) * 20;
     setXPosition(offsetX);
+    setYPosition(offsetY);
   };
 
   const animateClassName = () => {
-    if (selectedSection == 0) {
-      if (xPosition < -behaviorConfig.distanceToStart) {
-        setSelectedSection(-1)
-        return "web web--animate-timer";
-      } else if (xPosition > behaviorConfig.distanceToStart) {
-        setSelectedSection(1)
-        return "web web--animate-weights";
-      } else {
-        return "web";
-      }
-    } else if (selectedSection == -1) {
-      if (xPosition > behaviorConfig.distanceToSwitch) {
-        setSelectedSection(1)
-        return "web web--animate-weights";
-      } else {
-        return "web web--animate-timer";
-      }
-    } else if (selectedSection == 1) {
-      if (xPosition < -behaviorConfig.distanceToSwitch) {
-        setSelectedSection(-1)
-        return "web web--animate-timer";
-      } else {
-        return "web web--animate-weights";
-      }
-    }
+      if (selectedSection == 0) {
+        if (xPosition < -behaviorConfig.distanceToStart && yPosition > -8 && yPosition < 8) {
+          setSelectedSection(-1)
+          return "web web--animate-timer";
+        } else if (xPosition > behaviorConfig.distanceToStart && yPosition > -8 && yPosition < 8) {
+          setSelectedSection(1)
+          return "web web--animate-weights";
+        } else {
+          return "web";
+        }
+      } else if (selectedSection == -1) {
+        if (xPosition > behaviorConfig.distanceToSwitch && yPosition > -8 && yPosition < 8) {
+          setSelectedSection(1)
+          return "web web--animate-weights";
+        } else {
+          return "web web--animate-timer";
+        }
+      } else if (selectedSection == 1) {
+        if (xPosition < -behaviorConfig.distanceToSwitch && yPosition > -8 && yPosition < 8) {
+          setSelectedSection(-1)
+          return "web web--animate-timer";
+        } else {
+          return "web web--animate-weights";
+        }
+      }   
   }
 
   useEffect(() => {

@@ -6,9 +6,9 @@ const Header = () => {
   return (
     <div className="header">
       <h1>
-      <NavLink exact to="/" activeClassName="active">
+    <a href="/" >
         gustav <span id='training'>training</span>
-        </NavLink>
+        </a>
       </h1>
     </div>
   )
