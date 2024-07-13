@@ -9,6 +9,16 @@ import trybeforeyoubuy from "../img/features/trybeforeyoubuy.svg";
 
 import iconImage from "../img/icons/weights.png";
 
+const handleClickGA = (eventLabel) => {
+    if (window.gtag) {
+      window.gtag('event', 'click', {
+        'event_category': 'Links',
+        'event_label': eventLabel,
+        'value': 1
+      });
+    }
+  }
+
 export const icon = (
     <img src={iconImage} alt="Gustav Weights icon"/>
 )
@@ -37,7 +47,7 @@ export const appStoreLink = "https://apps.apple.com/us/app/gustav-weights/id6483
 
 export const features = (
     <div>
-        <a href={appStoreLink} target="_blank"><img src={appstore} alt="" srcset="" /></a>
+        <a href={appStoreLink} target="_blank" onClick={() => { handleClickGA(`appstore_${header}`) }}><img src={appstore} alt="" srcset="" /></a>
         <img className="app-detail--features-hidden" src={noadnocash} alt="" srcset="" />
         <img className="app-detail--features-hidden" src={addbtn} alt="" srcset="" />
     </div>

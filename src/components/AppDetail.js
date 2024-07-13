@@ -16,12 +16,22 @@ const AppDetail = ({ content }) => {
       clearTimeout(timer);
     }
   }, [])
+
+  const handleClickGA = (eventLabel) => {
+    if (window.gtag) {
+      window.gtag('event', 'click', {
+        'event_category': 'Links',
+        'event_label': eventLabel,
+        'value': 1
+      });
+    }
+  }
   
   return (
     <div className={`app-detail ${visible ? 'visible' : ''}`}>
 
       <h2>
-        <a href={content.appStoreLink} target='_blank'>
+        <a href={content.appStoreLink} target='_blank' onClick={() => { handleClickGA(`h2_${content.header}`) }}>
         {content.icon}{content.header}
         </a>
         </h2>

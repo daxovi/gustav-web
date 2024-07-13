@@ -10,6 +10,16 @@ import trybeforeyoubuy from "../img/features/trybeforeyoubuy.svg";
 
 import iconImage from "../img/icons/timer.png";
 
+const handleClickGA = (eventLabel) => {
+    if (window.gtag) {
+      window.gtag('event', 'click', {
+        'event_category': 'Links',
+        'event_label': eventLabel,
+        'value': 1
+      });
+    }
+  }
+
 export const icon = (
     <img src={iconImage} alt="Gustav Timer icon"/>
 )
@@ -40,10 +50,10 @@ export const appStoreLink = "https://apps.apple.com/us/app/gustav-workout-timer/
 
 export const features = (
     <div>
-        <a href={appStoreLink} target="_blank"><img src={appstore} alt="" srcset="" /></a>
+        <a href={appStoreLink} target="_blank" onClick={() => { handleClickGA(`appstore_${header}`) }}><img src={appstore} alt="" srcset="" /></a>
         <img className="app-detail--features-hidden" src={noadnocash} alt="" srcset="" />
         <img className="app-detail--features-hidden" src={skipbtn} alt="" srcset="" />
-        <NavLink to="/demo" activeClassName="active">
+        <NavLink to="/demo" activeClassName="active" onClick={() => { handleClickGA(`demo`)}}>
         <img className="app-detail--features-hidden" src={trybeforeyoubuy} alt="" srcset="" />
       </NavLink>
         <img className="app-detail--features-hidden" src={custombg} alt="" srcset="" />
